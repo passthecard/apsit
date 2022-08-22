@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "848721053294",
+    "firebase_url": "https://passthecard-30731-default-rtdb.firebaseio.com",
+    "project_id": "passthecard-30731",
+    "storage_bucket": "passthecard-30731.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:848721053294:android:29c30ebf570c92a1b8487f",
+        "android_client_info": {
+          "package_name": "com.example.passthecard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "848721053294-996eq2kpl620e38bcefj2hhlvvoff9jp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.passthecard",
+            "certificate_hash": "b4c3010edfd9916b5903f364d5067bb5142ab1fa"
+          }
+        },
+        {
+          "client_id": "848721053294-k6c2meh4licauisjrvp75odeepvlrv95.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIuj6BEfzrTgXHiYgICBQvjoAJzIc-BVA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "848721053294-k6c2meh4licauisjrvp75odeepvlrv95.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
