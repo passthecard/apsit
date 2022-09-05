@@ -3,15 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/91865/AndroidStudioProjects/PassTheCard2/app/src/main/res/drawable/ic_collegelogosvg.xml" value="0.1" />
         <entry key="..\:/Users/91865/AndroidStudioProjects/PassTheCard2/app/src/main/res/layout/activity_activitya.xml" value="0.13333333333333333" />
         <entry key="..\:/Users/91865/AndroidStudioProjects/PassTheCard2/app/src/main/res/layout/activity_activityb.xml" value="0.184375" />
         <entry key="..\:/Users/91865/AndroidStudioProjects/PassTheCard2/app/src/main/res/layout/activity_activityc.xml" value="0.1703125" />
         <entry key="..\:/Users/91865/AndroidStudioProjects/PassTheCard2/app/src/main/res/layout/activity_diva.xml" value="0.2" />
         <entry key="..\:/Users/91865/AndroidStudioProjects/PassTheCard2/app/src/main/res/layout/activity_divb.xml" value="0.1859375" />
-        <entry key="..\:/Users/91865/AndroidStudioProjects/PassTheCard2/app/src/main/res/layout/activity_flagthem.xml" value="0.1" />
+        <entry key="..\:/Users/91865/AndroidStudioProjects/PassTheCard2/app/src/main/res/layout/activity_flagthem.xml" value="0.16417272338606242" />
         <entry key="..\:/Users/91865/AndroidStudioProjects/PassTheCard2/app/src/main/res/layout/activity_flashpage.xml" value="0.2" />
+        <entry key="..\:/Users/91865/AndroidStudioProjects/PassTheCard2/app/src/main/res/layout/activity_introscreen.xml" value="0.1648148148148148" />
         <entry key="..\:/Users/91865/AndroidStudioProjects/PassTheCard2/app/src/main/res/layout/activity_login.xml" value="0.2" />
+        <entry key="..\:/Users/91865/AndroidStudioProjects/PassTheCard2/app/src/main/res/layout/activity_loginstudent.xml" value="0.1" />
         <entry key="..\:/Users/91865/AndroidStudioProjects/PassTheCard2/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/91865/AndroidStudioProjects/PassTheCard2/app/src/main/res/layout/activity_splash.xml" value="0.1" />
         <entry key="..\:/Users/91865/AndroidStudioProjects/PassTheCard2/app/src/main/res/layout/studentdetails.xml" value="0.22" />
       </map>
     </option>

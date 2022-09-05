@@ -59,7 +59,7 @@ public class Activityc extends AppCompatActivity {
         clearall();
 
 
-        DatabaseReference databaseReference= FirebaseDatabase.getInstance().getReference().child("Details");
+        DatabaseReference databaseReference= FirebaseDatabase.getInstance().getReference().child("Details of C");
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override

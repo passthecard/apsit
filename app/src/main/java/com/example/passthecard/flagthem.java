@@ -1,11 +1,14 @@
 package com.example.passthecard;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,6 +19,8 @@ public class flagthem extends AppCompatActivity {
     private TextView firstnameft,lastnameft,moodleidft,srnoft;
     private ImageView passit;
     private FirebaseAuth mauth;
+    private CardView cardloginbtn;
+    private Button tologinbtn;
 
 
     @Override
@@ -33,6 +38,8 @@ public class flagthem extends AppCompatActivity {
         moodleidft=findViewById(R.id.moodleidft);
         srnoft=findViewById(R.id.srnoft);
         passit=findViewById(R.id.passit);
+        cardloginbtn= findViewById(R.id.cardViewforbutton);
+        tologinbtn=findViewById(R.id.tologinbtn);
 
         passit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,9 +51,18 @@ public class flagthem extends AppCompatActivity {
                 else
                 {
                     Toast.makeText(flagthem.this, "You are not logged in, or you don't have the card to pass", Toast.LENGTH_SHORT).show();
+                    cardloginbtn.setVisibility(view.VISIBLE);
                 }
 
 
+            }
+        });
+
+        tologinbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent openlogin= new Intent(flagthem.this,loginstudent.class);
+                startActivity(openlogin);
             }
         });
 

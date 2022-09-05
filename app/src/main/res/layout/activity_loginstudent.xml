@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/seashell"
+    android:layout_height="match_parent"
+    tools:context=".loginstudent">
+
+
+    <LinearLayout
+
+
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="200dp"
+        android:orientation="vertical">
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            app:cardBackgroundColor="@color/seashell"
+            app:cardCornerRadius="30dp"
+            android:layout_height="wrap_content">
+
+
+            <EditText
+                android:id="@+id/loginmoodleid"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+
+
+                android:background="@color/white"
+                android:gravity="center"
+
+                android:hint="MOODLE ID"
+                android:inputType="text"
+                android:paddingStart="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="20sp" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            android:layout_marginTop="100dp"
+            app:cardBackgroundColor="@color/seashell"
+            app:cardCornerRadius="30dp">
+
+
+            <Button
+                android:id="@+id/signupbuttonlogin"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+
+                android:layout_weight="1"
+                android:background="@color/white"
+
+                android:gravity="center"
+
+                android:shadowColor="@color/white"
+
+                android:text="LOG IN"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+</LinearLayout>
