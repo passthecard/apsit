@@ -48,7 +48,7 @@ class introscreen : AppCompatActivity() {
             //  back_anim.setTarget(back);
             front_anim.start()
             front_anim.doOnEnd {
-                val i = Intent(this, MainActivitycompose::class.java)
+                val i = Intent(this, ManLayoutActivity::class.java)
                 startActivity(i)
                 overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
                 finish()
