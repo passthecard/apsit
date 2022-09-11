@@ -5,76 +5,100 @@
     android:layout_width="match_parent"
     android:background="@color/seashell"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".loginstudent">
 
-
-    <LinearLayout
-
-
-
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="200dp"
-        android:orientation="vertical">
+        android:src="@drawable/compslogo"
+        android:layout_gravity="center">
+
+    </ImageView>
 
 
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            app:cardBackgroundColor="@color/seashell"
-            app:cardCornerRadius="30dp"
-            android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/regularbold"
+        android:text="LoG In"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
 
 
-            <EditText
-                android:id="@+id/loginmoodleid"
-                android:layout_width="300dp"
-                android:layout_height="60dp"
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
 
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="35dp"
+        android:textSize="13sp"
 
-                android:background="@color/white"
-                android:gravity="center"
+        android:textColor="@color/black"
+        android:text="Log in to pass the card. Only card holder can pass the card." />
 
-                android:hint="MOODLE ID"
-                android:inputType="text"
-                android:paddingStart="10dp"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"
-                android:textSize="20sp" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="70dp"
 
-        </androidx.cardview.widget.CardView>
+        android:gravity="center"
+        android:layout_marginTop="35dp">
 
+        <EditText
 
-        <androidx.cardview.widget.CardView
+            android:id="@+id/moodleidlogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Moodle id"
+            android:textSize="20sp"
 
-            android:layout_marginTop="100dp"
-            app:cardBackgroundColor="@color/seashell"
-            app:cardCornerRadius="30dp">
+            android:textColorHint="@color/grey"
+            android:textColor="@color/black"
+
+            android:inputType="number" />
 
 
-            <Button
-                android:id="@+id/signupbuttonlogin"
-                android:layout_width="200dp"
-                android:layout_height="60dp"
+        <Button
+            android:id="@+id/loginbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
-                android:layout_weight="1"
-                android:background="@color/white"
+            android:layout_marginTop="50dp"
+            android:text="LOg In"
+            android:textColor="@color/black"
+            android:fontFamily="@font/regularbold"
 
-                android:gravity="center"
+            android:background="@drawable/buttonround">
 
-                android:shadowColor="@color/white"
+        </Button>
 
-                android:text="LOG IN"
-                android:textColor="@color/black"
-                android:textSize="20sp" />
 
-        </androidx.cardview.widget.CardView>
 
 
     </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PassTheCard Apsit"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        android:layout_marginTop="140dp">
+
+    </TextView>
+
+
+
+
+
 
 </LinearLayout>

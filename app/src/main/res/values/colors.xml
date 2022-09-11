@@ -10,4 +10,6 @@
     <color name="peach">#FFE5B4</color>
     <color name="mintgreen">#3EB489</color>
     <color name="seashell">#FFF5EE</color>
+    <color name="red"> #FF0000</color>
+    <color name="grey">#808080</color>
 </resources>

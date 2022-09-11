@@ -66,7 +66,7 @@ fun mybutton() {
         Modifier
             .fillMaxHeight()
             .fillMaxWidth()
-            .padding(top = 200.dp)
+            .padding(top = 140.dp)
             .background(colorResource(id = R.color.seashell)),
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -158,6 +158,31 @@ fun mybutton() {
             ) {
 
             Text(text = "DIV C", color = colorResource(id = R.color.white))
+
+
+        }
+        Spacer(
+            Modifier
+                .height(50.0.dp)
+                .width(50.0.dp)
+
+        )
+
+        Button(onClick = { /*TODO*/ },
+
+
+            Modifier
+                .height(100.dp)
+                .width(200.dp)
+                .padding(start = 30.dp, end = 10.dp),
+
+            colors = ButtonDefaults.buttonColors(backgroundColor = Color.LightGray),
+            enabled = true,
+            border = BorderStroke(width = 5.dp, brush = SolidColor(Color.Yellow)),
+            shape = RoundedCornerShape(40)
+        ) {
+
+            Text(text = "Faculty", color= colorResource(id = R.color.white))
 
 
         }

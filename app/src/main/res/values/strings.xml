@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">PassTheCard</string>
     <string name="title_activity_main_activitycompose">MainActivitycompose</string>
+    <string name="divisions_teachers"><![CDATA[Divisions & Teachers]]></string>
 </resources>

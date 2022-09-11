@@ -90,7 +90,8 @@ public class ManLayoutActivity extends AppCompatActivity {
 
 
     }
-    public void clicksupport (View view){
+    public void login (View view){
+        redirectActivity(this, loginstudent.class);
 
     }
 

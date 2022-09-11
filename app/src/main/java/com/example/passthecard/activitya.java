@@ -125,6 +125,7 @@ public class activitya extends AppCompatActivity {
 
     }
 
+
     private void clearall() {
 
 

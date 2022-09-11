@@ -12,20 +12,22 @@
         android:layout_height="120dp"
         android:layout_margin="16dp"
         android:onClick="ClickLogo"
-        android:src="@drawable/ic_menu" />
+        android:src="@drawable/compslogo" />
 
     <TextView
 
-        android:layout_width="376dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
 
         android:layout_margin="10dp"
 
+        android:fontFamily="@font/regularbold"
         android:gravity="center"
-        android:text="text"
+        android:text="DEPARTMENT OF COMPUTER ENGINEERING"
         android:textAlignment="center"
         android:textColor="#636363"
-        android:textSize="16sp"
+        android:textSize="13sp"
         android:textStyle="bold" />
 
     <View
@@ -49,43 +51,47 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_weight="1"
+            android:fontFamily="@font/regularbold"
+            android:onClick="ClickHome"
             android:padding="12dp"
-            android:textColor="@color/black"
-            android:text="Home" />
-
-        <ImageView
-            android:layout_width="47dp"
-            android:layout_height="43dp"
-            android:layout_marginEnd="48dp"
-            android:src="@drawable/passthecardicon" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-
-        android:gravity="center_vertical"
-
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_weight="1"
-            android:onClick="Division"
-
-            android:padding="12dp"
-            android:text="Divisions"
+            android:text="Home"
             android:textColor="@color/black" />
 
         <ImageView
             android:layout_width="47dp"
             android:layout_height="43dp"
             android:layout_marginEnd="48dp"
-            android:src="@drawable/passthecardicon"
-             />
+            android:onClick="ClickHome"
+            android:src="@drawable/ic_baseline_home_24" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+
+        android:gravity="center_vertical"
+
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/regularbold"
+
+            android:onClick="Division"
+            android:padding="12dp"
+            android:text="@string/divisions_teachers"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:layout_width="47dp"
+            android:layout_height="43dp"
+            android:layout_marginEnd="48dp"
+            android:onClick="Division"
+            android:src="@drawable/divisionlogo" />
     </LinearLayout>
 
 
@@ -103,17 +109,47 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_weight="1"
+            android:fontFamily="@font/regularbold"
+            android:onClick="Rules"
             android:padding="12dp"
-            android:textColor="@color/black"
-            android:text="Rules" />
+            android:text="Rules"
+            android:textColor="@color/black" />
 
         <ImageView
             android:layout_width="47dp"
             android:layout_height="43dp"
             android:layout_marginEnd="48dp"
-            android:src="@drawable/passthecardicon" />
+            android:onClick="Rules"
+            android:src="@drawable/ruleslogo" />
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+
+        android:gravity="center_vertical"
+
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/regularbold"
+            android:onClick="ClickAboutUs"
+            android:padding="12dp"
+            android:text="About Us"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:layout_width="47dp"
+            android:layout_height="43dp"
+            android:layout_marginEnd="48dp"
+            android:onClick="ClickAboutUs"
+            android:src="@drawable/aboutuslogo" />
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -128,16 +164,19 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_weight="1"
+            android:fontFamily="@font/regularbold"
+            android:onClick="login"
             android:padding="12dp"
-            android:textColor="@color/black"
-            android:text="About" />
+
+            android:text="log-in"
+            android:textColor="@color/black" />
 
         <ImageView
             android:layout_width="47dp"
             android:layout_height="43dp"
             android:layout_marginEnd="48dp"
-            android:src="@drawable/passthecardicon"
-            />
+            android:onClick="login"
+            android:src="@drawable/loginlogo" />
     </LinearLayout>
 
 

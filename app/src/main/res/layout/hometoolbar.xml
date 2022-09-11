@@ -13,14 +13,16 @@
         android:layout_height="wrap_content"
         android:onClick="ClickMenu"
         android:src="@drawable/ic_menu"/>
+
     <TextView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:fontFamily="@font/regularbold"
         android:text="HOME"
-        android:textSize="20sp"
-        android:textStyle="bold"
         android:textAlignment="center"
-        android:textColor="#636363"/>
+        android:textColor="#636363"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
