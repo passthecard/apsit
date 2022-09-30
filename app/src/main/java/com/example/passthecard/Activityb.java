@@ -73,6 +73,7 @@ public class Activityb extends AppCompatActivity {
                     studentdetailsmmodel.setFirstname(snapshot.child("first_name").getValue().toString());
                     studentdetailsmmodel.setLastname(snapshot.child("last_name").getValue().toString());
                     studentdetailsmmodel.setMoodleid(snapshot.child("moodle_id").getValue().toString());
+
                     studentdetailsmmodel.setSrno(snapshot.getKey().toString());
 
                     studentdetailsmodelArrayList.add(studentdetailsmmodel);

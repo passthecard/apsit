@@ -14,9 +14,104 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
 
+
         android:orientation="vertical">
 
-        <include layout="@layout/hometoolbar" />
+
+        <include layout="@layout/hometoolbar"
+
+            />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/regularbold"
+            android:text="welcome harsh !"
+            android:textSize="20sp"
+            android:textColor="@color/black">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:textSize="18sp"
+            android:fontFamily="@font/regularbold"
+            android:text="Please Select a proof to continue"
+            android:textColor="@color/black">
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="60dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/videoproof"
+                android:layout_height="120dp"
+                android:src="@drawable/videoproof"
+                android:layout_width="120dp"
+                android:layout_marginEnd="40dp">
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/photo"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/photoproof">
+
+            </ImageView>
+
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="120dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/audioproof"
+                android:layout_height="120dp"
+                android:src="@drawable/audioproof"
+                android:layout_width="120dp"
+                android:layout_marginEnd="40dp">
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/witness"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@drawable/witness">
+
+            </ImageView>
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
 
 
 

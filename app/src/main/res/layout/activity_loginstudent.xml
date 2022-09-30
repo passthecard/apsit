@@ -9,10 +9,10 @@
     tools:context=".loginstudent">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/compslogo"
-        android:layout_gravity="center">
+        android:layout_width="305dp"
+        android:layout_height="262dp"
+        android:layout_gravity="center"
+        android:src="@drawable/compslogo">
 
     </ImageView>
 
@@ -66,9 +66,41 @@
 
             android:inputType="number" />
 
+        <EditText
+
+            android:id="@+id/Divisionlogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Division"
+            android:inputType="textCapCharacters"
+            android:textColor="@color/black"
+
+            android:textColorHint="@color/grey"
+            android:textSize="20sp"
+
+            />
+        <EditText
+
+            android:id="@+id/Rollnologin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Roll no(1-69)"
+            android:textSize="20sp"
+
+            android:textColorHint="@color/grey"
+            android:textColor="@color/black"
+
+            android:inputType="number" />
+
 
         <Button
-            android:id="@+id/loginbtn"
+            android:id="@+id/logbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
@@ -92,13 +124,9 @@
         android:text="PassTheCard Apsit"
         android:textColor="@color/black"
         android:layout_gravity="center"
-        android:layout_marginTop="140dp">
+        android:layout_marginTop="80dp">
 
     </TextView>
-
-
-
-
 
 
 </LinearLayout>
