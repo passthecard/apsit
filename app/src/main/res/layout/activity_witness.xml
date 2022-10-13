@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="@color/seashell"
+    tools:context=".witness">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Card Holder's witness"
+        android:fontFamily="@font/regularbold"
+        android:textColor="@color/black">
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/witness1"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:hint="Witness one"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black">
+
+
+
+    </EditText>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:textColor="@color/black"
+
+        android:text="Future Card Holder's witness"
+        android:fontFamily="@font/regularbold">
+
+    </TextView>
+
+
+    <EditText
+        android:id="@+id/witness2"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:hint="Witness two"
+        android:textColorHint="@color/black">
+    </EditText>
+
+
+    <Button
+        android:id="@+id/witnesproceedbtn"
+        android:layout_width="100dp"
+        android:height="40dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/buttonround"
+        android:textColor="@color/black"
+
+        android:text="Proceed btn">
+
+    </Button>
+
+
+
+</LinearLayout>

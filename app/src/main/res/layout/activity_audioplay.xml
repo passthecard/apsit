@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/seashell"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".audioplay">
+
+
+    <ImageView
+        android:id="@+id/micimage"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/micoff">
+
+    </ImageView>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/startbtn"
+            android:layout_width="75dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:background="@drawable/buttonround"
+            android:gravity="center"
+            android:onClick="startrecording"
+            android:text="Start"
+
+
+            android:textColor="@color/black"
+            android:textSize="20sp">
+
+        </Button>
+
+        <Button
+            android:id="@+id/stopbtn"
+            android:layout_width="75dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/buttonround"
+            android:gravity="center"
+            android:onClick="stoprecording"
+            android:text="Stop"
+
+
+            android:textColor="@color/black"
+            android:textSize="20sp">
+
+        </Button>
+
+        <Button
+            android:id="@+id/playbtn"
+            android:layout_width="75dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/buttonround"
+            android:gravity="center"
+            android:onClick="playaudio"
+            android:text="Play"
+
+
+            android:textColor="@color/black"
+            android:textSize="20sp">
+
+        </Button>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/proceedaudio"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/buttonround"
+        android:gravity="center"
+        android:onClick="proceedbtnclick"
+        android:text="Proceed"
+
+
+        android:textColor="@color/black"
+        android:textSize="20sp">
+
+    </Button>
+
+</LinearLayout>

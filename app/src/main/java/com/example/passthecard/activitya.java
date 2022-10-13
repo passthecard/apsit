@@ -28,7 +28,7 @@ public class activitya extends AppCompatActivity {
     private sdrvadapter sdrvadapter;
     private ProgressDialog progressDialog;
     private com.example.passthecard.sdrvadapter.Recyclerviewlistner listner;
-
+    private String videouri,imageuri,audiopath,witness1,witness2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,7 +42,11 @@ public class activitya extends AppCompatActivity {
 
 
 
-
+        videouri=getIntent().getStringExtra("videouri");
+        imageuri=getIntent().getStringExtra("imageuri");
+        audiopath=getIntent().getStringExtra("audiopath");
+        witness1=getIntent().getStringExtra("witness1");
+        witness2=getIntent().getStringExtra("witness2");
         progressDialog=new ProgressDialog(activitya.this);
         progressDialog.setCancelable(false);
 
@@ -116,6 +120,11 @@ public class activitya extends AppCompatActivity {
                 intent.putExtra("lastname",studentdetailsmodelArrayList.get(position).getLastname());
                 intent.putExtra("moodleid",studentdetailsmodelArrayList.get(position).getMoodleid());
                 intent.putExtra("srno",studentdetailsmodelArrayList.get(position).getSrno());
+                intent.putExtra("videouri",videouri);
+                intent.putExtra("imageuri",imageuri);
+                intent.putExtra("audiopath",audiopath);
+                intent.putExtra("witness1",witness1);
+                intent.putExtra("witness2",witness2);
                 startActivity(intent);
 
 

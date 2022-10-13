@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
@@ -43,7 +44,7 @@ public class newactivity extends AppCompatActivity {
     private String username;
     private FirebaseAuth mauth;
     private FirebaseUser currentuser;
-    private String mid,div,newdiv;
+    private String mid,div,newdiv,rolno;
 
 
     @Override
@@ -68,6 +69,8 @@ public class newactivity extends AppCompatActivity {
         username=getIntent().getStringExtra("username");
         mid=getIntent().getStringExtra("mid");
         div=getIntent().getStringExtra("div");
+        rolno=getIntent().getStringExtra("rolno");
+
         newdiv="Division"+div;
 
 
@@ -100,7 +103,8 @@ public class newactivity extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 progressDialog.dismiss();
                                 if (task.isSuccessful()) {
-                                   // Toast.makeText(newactivity.this, "Welcome "+username, Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(newactivity.this, "Welcome "+username, Toast.LENGTH_SHORT).show();
+
                                     currentuser=FirebaseAuth.getInstance().getCurrentUser();
                                     UserProfileChangeRequest up=new UserProfileChangeRequest.Builder()
                                             .setDisplayName(username)
@@ -123,6 +127,14 @@ public class newactivity extends AppCompatActivity {
 
 
                                     Intent intent = new Intent(newactivity.this, ManLayoutActivity.class);
+                                    SharedPreferences shrd= getSharedPreferences("idk",MODE_PRIVATE);
+                                    SharedPreferences.Editor editor= shrd.edit();
+                                    editor.putString("username",username);
+                                    editor.putString("mid",mid);
+                                    editor.putString("div",div);
+                                    editor.putString("rollno",rolno);
+                                    editor.apply();
+
                                     intent.putExtra("username",username);
                                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK
                                             | Intent.FLAG_ACTIVITY_CLEAR_TASK);

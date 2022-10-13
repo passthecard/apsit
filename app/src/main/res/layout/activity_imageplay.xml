@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".imageplay"
+    android:orientation="vertical"
+    android:background="@color/seashell">
+
+    <ImageView
+        android:layout_width="350dp"
+        android:layout_height="500dp"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+
+
+
+        android:id="@+id/iv">
+
+
+    </ImageView>
+
+    <Button
+        android:id="@+id/pimg"
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:text="proceed"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+
+        android:background="@drawable/buttonround"
+        >
+
+    </Button>
+
+
+</LinearLayout>

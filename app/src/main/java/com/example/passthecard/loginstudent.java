@@ -74,7 +74,7 @@ public class loginstudent extends AppCompatActivity {
                         div=divisionlogin.getText().toString().toUpperCase().trim();
                         rolno=rolnologin.getText().toString().trim();
                         DatabaseReference db= FirebaseDatabase.getInstance().getReference().child("Details of "+div).child(rolno);
-                        DatabaseReference dr=FirebaseDatabase.getInstance().getReference().child("card_"+div.toLowerCase(Locale.ROOT));
+                        DatabaseReference dr=FirebaseDatabase.getInstance().getReference().child("card_"+div);
 
                         dr.addValueEventListener(new ValueEventListener() {
                             @Override
@@ -141,6 +141,7 @@ public class loginstudent extends AppCompatActivity {
                                                                         intent.putExtra("username",username);
                                                                         intent.putExtra("mid",mid);
                                                                         intent.putExtra("div",div);
+                                                                        intent.putExtra("rolno",rolno);
                                                                         startActivity(intent);
 
 

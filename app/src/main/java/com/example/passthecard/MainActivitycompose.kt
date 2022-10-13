@@ -3,6 +3,7 @@ package com.example.passthecard
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.transition.Visibility
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.contextaware.ContextAware
@@ -168,7 +169,7 @@ fun mybutton() {
 
         )
 
-        Button(onClick = { /*TODO*/ },
+       /* Button(onClick = { /*TODO*/ },
 
 
             Modifier
@@ -185,7 +186,7 @@ fun mybutton() {
             Text(text = "Faculty", color= colorResource(id = R.color.white))
 
 
-        }
+        }*/
 
 
     }

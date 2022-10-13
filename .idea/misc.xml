@@ -16,14 +16,16 @@
         <entry key="..\:/Users/91865/AndroidStudioProjects/PassTheCard2/app/src/main/res/drawable/logout.xml" value="0.1115" />
         <entry key="..\:/Users/91865/AndroidStudioProjects/PassTheCard2/app/src/main/res/drawable/ruleslogo.xml" value="0.1" />
         <entry key="..\:/Users/91865/AndroidStudioProjects/PassTheCard2/app/src/main/res/font/regularbold.xml" value="0.21388888888888888" />
-        <entry key="..\:/Users/91865/AndroidStudioProjects/PassTheCard2/app/src/main/res/layout/activity_aboutus.xml" value="0.1" />
+        <entry key="..\:/Users/91865/AndroidStudioProjects/PassTheCard2/app/src/main/res/layout/activity_aboutus.xml" value="0.10666666666666667" />
         <entry key="..\:/Users/91865/AndroidStudioProjects/PassTheCard2/app/src/main/res/layout/activity_activitya.xml" value="0.13333333333333333" />
         <entry key="..\:/Users/91865/AndroidStudioProjects/PassTheCard2/app/src/main/res/layout/activity_activityb.xml" value="0.184375" />
         <entry key="..\:/Users/91865/AndroidStudioProjects/PassTheCard2/app/src/main/res/layout/activity_activityc.xml" value="0.1703125" />
+        <entry key="..\:/Users/91865/AndroidStudioProjects/PassTheCard2/app/src/main/res/layout/activity_audioplay.xml" value="0.1" />
         <entry key="..\:/Users/91865/AndroidStudioProjects/PassTheCard2/app/src/main/res/layout/activity_diva.xml" value="0.2" />
         <entry key="..\:/Users/91865/AndroidStudioProjects/PassTheCard2/app/src/main/res/layout/activity_divb.xml" value="0.1859375" />
         <entry key="..\:/Users/91865/AndroidStudioProjects/PassTheCard2/app/src/main/res/layout/activity_flagthem.xml" value="0.16417272338606242" />
         <entry key="..\:/Users/91865/AndroidStudioProjects/PassTheCard2/app/src/main/res/layout/activity_flashpage.xml" value="0.2" />
+        <entry key="..\:/Users/91865/AndroidStudioProjects/PassTheCard2/app/src/main/res/layout/activity_imageplay.xml" value="0.1" />
         <entry key="..\:/Users/91865/AndroidStudioProjects/PassTheCard2/app/src/main/res/layout/activity_introscreen.xml" value="0.22" />
         <entry key="..\:/Users/91865/AndroidStudioProjects/PassTheCard2/app/src/main/res/layout/activity_login.xml" value="0.2" />
         <entry key="..\:/Users/91865/AndroidStudioProjects/PassTheCard2/app/src/main/res/layout/activity_loginstudent.xml" value="0.14285714285714285" />
@@ -31,10 +33,15 @@
         <entry key="..\:/Users/91865/AndroidStudioProjects/PassTheCard2/app/src/main/res/layout/activity_newactivity.xml" value="0.1648148148148148" />
         <entry key="..\:/Users/91865/AndroidStudioProjects/PassTheCard2/app/src/main/res/layout/activity_rules.xml" value="0.1620253164556962" />
         <entry key="..\:/Users/91865/AndroidStudioProjects/PassTheCard2/app/src/main/res/layout/activity_splash.xml" value="0.1" />
+        <entry key="..\:/Users/91865/AndroidStudioProjects/PassTheCard2/app/src/main/res/layout/activity_videoplay.xml" value="0.13333333333333333" />
+        <entry key="..\:/Users/91865/AndroidStudioProjects/PassTheCard2/app/src/main/res/layout/activity_videoproofactivity.xml" value="0.1641025641025641" />
+        <entry key="..\:/Users/91865/AndroidStudioProjects/PassTheCard2/app/src/main/res/layout/activity_witness.xml" value="0.1641025641025641" />
         <entry key="..\:/Users/91865/AndroidStudioProjects/PassTheCard2/app/src/main/res/layout/homenavbar.xml" value="0.1" />
         <entry key="..\:/Users/91865/AndroidStudioProjects/PassTheCard2/app/src/main/res/layout/hometoolbar.xml" value="0.16118143459915613" />
         <entry key="..\:/Users/91865/AndroidStudioProjects/PassTheCard2/app/src/main/res/layout/man_layout.xml" value="0.1620253164556962" />
         <entry key="..\:/Users/91865/AndroidStudioProjects/PassTheCard2/app/src/main/res/layout/studentdetails.xml" value="0.22" />
+        <entry key="..\:/Users/91865/AndroidStudioProjects/PassTheCard2/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
+        <entry key="..\:/Users/91865/AndroidStudioProjects/PassTheCard2/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
       </map>
     </option>
   </component>

@@ -1,36 +1,38 @@
 package com.example.passthecard;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
-
-import android.app.Activity;
-import android.content.Intent;
-import android.graphics.Color;
-import android.os.Bundle;
-import android.view.View;
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.Color;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
+import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
-import android.widget.Button;
+
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.FirebaseDatabase;
+
+import java.io.ByteArrayOutputStream;
 
 
 public class ManLayoutActivity extends AppCompatActivity {
@@ -40,9 +42,13 @@ public class ManLayoutActivity extends AppCompatActivity {
     private ImageView navloginlogo;
     private TextView dandt,warning,tvusername,logout;
     private ImageView dandtimg,videoproof,audioproof,witness,photoproof,logoutimglogo;
-    private String username;
     private FirebaseUser cu;
     int select=0;
+    private int VIDEO_REQUEST=101;
+    private int IMAGE_REQUEST=100;
+    private static Uri videouri,imageuri;
+    private static final int STORAGE_PERMISSION_COE=1;
+
 
 
 
@@ -50,6 +56,7 @@ public class ManLayoutActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.man_layout);
+
         mauth=FirebaseAuth.getInstance();
 
 
@@ -66,7 +73,6 @@ public class ManLayoutActivity extends AppCompatActivity {
         videoproof=findViewById(R.id.videoproof);
         witness=findViewById(R.id.witness);
         audioproof=findViewById(R.id.audioproof);
-        username=getIntent().getStringExtra("username");
         logout=findViewById(R.id.navlogout);
         logoutimglogo=findViewById(R.id.navlogoutlogo);
         if(mauth.getCurrentUser()==null)
@@ -75,21 +81,27 @@ public class ManLayoutActivity extends AppCompatActivity {
         }
         else
         {
-            cu=FirebaseAuth.getInstance().getCurrentUser();
-            tvusername.setText("Welcome "+cu.getDisplayName().toString()+" !"+cu.getEmail());
-          /*  if(cu.getEmail().equals("DivisionA"))
+            //cu=FirebaseAuth.getInstance().getCurrentUser();
+            //tvusername.setText("Welcome "+cu.getDisplayName().toString()+" !"+cu.getEmail());
+
+            SharedPreferences getshared= getSharedPreferences("idk",MODE_PRIVATE);
+            String username=getshared.getString("username","");
+            String moodleid=getshared.getString("mid","");
+            String div = getshared.getString("div","");
+            tvusername.setText("Welcome "+username+" !");
+           /* if(div.equals("A"))
             {
                 select=0;
             }
-            else if(cu.getEmail().equals("DivisionB"))
+            else if(div.equals("B"))
             {
                 select=1;
             }
             else {
                 select=2;
-            }
+            }*/
 
-           */
+
 
         }
 
@@ -109,33 +121,41 @@ public class ManLayoutActivity extends AppCompatActivity {
 
 
         }
+        checkPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE,STORAGE_PERMISSION_COE);
 
         videoproof.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(mauth.getCurrentUser()==null)
+               if(mauth.getCurrentUser()==null)
                 {
                     Toast.makeText(ManLayoutActivity.this, "You are not  logged in ", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                else if(select==0)
-                {
-                    Intent intent= new Intent(ManLayoutActivity.this, activitya.class);
-                    startActivity(intent);
-                }
-                else if(select==1) {
-                    Intent intent = new Intent(ManLayoutActivity.this, Activityb.class);
-                    startActivity(intent);
+               else
+               {
 
-                }
-                else if(select==2)
-                {
-                    Intent intent = new Intent(ManLayoutActivity.this, Activityc.class);
-                    startActivity(intent);
+                   if(ContextCompat.checkSelfPermission(
+                           getApplicationContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE )== PackageManager.PERMISSION_GRANTED) {
+                       Intent videointent = new Intent(MediaStore.ACTION_VIDEO_CAPTURE);
 
-                }
+                       startActivityForResult(videointent, VIDEO_REQUEST);
+                   }
+
+                   else
+                   {
+                       Toast.makeText(ManLayoutActivity.this, "Storage permission denied", Toast.LENGTH_SHORT).show();
+                   }
+
+               }
+
+
+
+
+
             }
         });
+
+
 
         audioproof.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -144,6 +164,11 @@ public class ManLayoutActivity extends AppCompatActivity {
                 {
                     Toast.makeText(ManLayoutActivity.this, "You are not logged in ", Toast.LENGTH_SHORT).show();
                     return;
+                }
+                else
+                {
+                    Intent audioplay= new Intent(ManLayoutActivity.this,audioplay.class);
+                    startActivity(audioplay);
                 }
             }
         });
@@ -155,6 +180,26 @@ public class ManLayoutActivity extends AppCompatActivity {
                 {
                     Toast.makeText(ManLayoutActivity.this, "You are not logged  in ", Toast.LENGTH_SHORT).show();
                     return;
+                }
+                else
+                {
+                   if(ContextCompat.checkSelfPermission(
+                           getApplicationContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE )== PackageManager.PERMISSION_GRANTED)
+                    {
+                        Intent imageintent=new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+
+                        startActivityForResult(imageintent,IMAGE_REQUEST);
+
+                    }
+                   else
+                   {
+                       Toast.makeText(ManLayoutActivity.this, "Storage permission denied", Toast.LENGTH_SHORT).show();
+
+                   }
+
+
+
+
                 }
             }
         });
@@ -168,6 +213,8 @@ public class ManLayoutActivity extends AppCompatActivity {
                     Toast.makeText(ManLayoutActivity.this, "You are not logged in ", Toast.LENGTH_SHORT).show();
                     return;
                 }
+                Intent i= new Intent(ManLayoutActivity.this, com.example.passthecard.witness.class);
+                startActivity(i);
             }
         });
 
@@ -181,6 +228,89 @@ public class ManLayoutActivity extends AppCompatActivity {
 
 
     }
+
+    private void checkPermission(String permission, int requestcode) {
+
+        if (ContextCompat.checkSelfPermission(ManLayoutActivity.this, permission) == PackageManager.PERMISSION_DENIED) {
+
+            AlertDialog.Builder alertBuilder = new AlertDialog.Builder(this);
+            alertBuilder.setCancelable(true);
+            alertBuilder.setTitle("Storage permission needed");
+            alertBuilder.setMessage("The application requires storage permission to save the proof on local storage. The application does not gather user data");
+            AlertDialog alert = alertBuilder.create();
+            alert.show();
+            ActivityCompat.requestPermissions(ManLayoutActivity.this, new String[] { permission }, requestcode);
+        }
+
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if(requestCode==STORAGE_PERMISSION_COE)
+        {
+            if(grantResults.length > 0
+                    && grantResults[0] == PackageManager.PERMISSION_GRANTED)
+            {
+                Toast.makeText(this, "Storage Permission Granted", Toast.LENGTH_LONG).show();
+            }
+            else
+            {
+                Toast.makeText(this, "Storage Permission Denied", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+
+
+        super.onActivityResult(requestCode, resultCode, data);
+           if(requestCode==VIDEO_REQUEST)
+           {
+               if(resultCode==RESULT_OK)
+               {
+                   videouri=data.getData();
+                   Log.i("video_reccord_tag", String.valueOf(videouri));
+                   Intent videoplay=new Intent(ManLayoutActivity.this, com.example.passthecard.videoplay.class);
+                   videoplay.putExtra("videouri",videouri.toString());
+                   startActivity(videoplay);
+               }
+           }
+
+           else if(requestCode==IMAGE_REQUEST)
+           {
+               if(resultCode==RESULT_OK)
+               {
+                   Bundle extras = data.getExtras();
+                   Bitmap imageBitmap = (Bitmap) extras.get("data");
+                   Uri tempuri=getImageuri(getApplicationContext(),imageBitmap);
+                   Log.i("image_tag",String.valueOf(tempuri));
+                   Intent imageplay= new Intent(ManLayoutActivity.this, com.example.passthecard.imageplay.class);
+                   imageplay.putExtra("imageuri",tempuri.toString());
+                   startActivity(imageplay);
+
+               }
+           }
+
+
+
+
+
+    }
+
+    private Uri getImageuri(Context applicationContext, Bitmap imageBitmap) {
+
+        ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+
+            imageBitmap.compress(Bitmap.CompressFormat.PNG, 100, bytes);
+
+        String path = MediaStore.Images.Media.insertImage(applicationContext.getContentResolver(), imageBitmap, "Title", null);
+        return Uri.parse(path);
+
+
+    }
+
 
     public void ClickMenu (View view){
         openDrawer(drawerLayout);
@@ -224,6 +354,7 @@ public class ManLayoutActivity extends AppCompatActivity {
 
     }
     public void ClickAboutUs (View view){
+        redirectActivity(this, aboutus.class);
 
 
     }
